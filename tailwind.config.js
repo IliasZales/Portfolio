@@ -1,13 +1,33 @@
 module.exports = {
+  screens: {
+    sm: '575px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+  },
   theme: {
     fontFamily: {
-      display: ['Gilroy', 'sans-serif'],
-      body: ['Graphik', 'sans-serif'],
+      display: ['Righteous'],
+      body: ['Righteous'],
+    },
+    theme: {
+      colors: {
+        blue:'#333333',
+        grey:'#ffed4a',
+      },
+    },
+  
+    theme: {
+      inset: {
+        '0': 0,
+       auto: 'auto',
+       '1/2': '50%',
+      },
     },
     extend: {
       colors: {
-        '1': '#9cdbff',
-        '2': '#ffffff',
+        'primary': '#8AA7B4',
+        'secondary': '#333333',
         '3': '#b2b2b2',
         '4': '#A52A2A',
         '5': '#000000',

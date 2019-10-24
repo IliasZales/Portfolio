@@ -16,5 +16,11 @@
         "jsx": "react",
         "allowJs": true,
         "strict": true
+
+        
     }
+
+
+    
+
 }
