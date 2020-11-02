@@ -43,7 +43,7 @@ const Layout = ({ children, pageName, title, description, type,image }: Props) =
           <div className=' w-2/6 h-28  bg-primary  absolute bottom-0 right-0 mb-20  ' >
               <h3 className="text-black text-2xl text-left align-middle pb-2 pt-4 pl-8">Github</h3>
               <h3 className="text-black text-2xl text-left align-middle pb-2 pl-8">Xing</h3> 
-              <h3 className="text-black text-2xl text-left align-middle pl-8">Instagram</h3> 
+              <h3 className="text-black text-2xl text-left align-middle pl-8">Instagram</h3>  // test
 
              </div>
          </div>
