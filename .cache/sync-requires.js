@@ -7,6 +7,7 @@ const preferDefault = m => m && m.default || m
 exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/macpro/Documents/Portfolio-Ilias-Zales/Portfolio/.cache/dev-404-page.js"))),
   "component---src-pages-404-tsx": hot(preferDefault(require("/Users/macpro/Documents/Portfolio-Ilias-Zales/Portfolio/src/pages/404.tsx"))),
-  "component---src-pages-index-tsx": hot(preferDefault(require("/Users/macpro/Documents/Portfolio-Ilias-Zales/Portfolio/src/pages/index.tsx")))
+  "component---src-pages-index-tsx": hot(preferDefault(require("/Users/macpro/Documents/Portfolio-Ilias-Zales/Portfolio/src/pages/index.tsx"))),
+  "component---src-pages-timeline-tsx": hot(preferDefault(require("/Users/macpro/Documents/Portfolio-Ilias-Zales/Portfolio/src/pages/timeline.tsx")))
 }
 

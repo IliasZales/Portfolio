@@ -29,7 +29,7 @@ const Layout = ({ children, pageName, title, description, type,image }: Props) =
        <div className=" bg-primary absolute top-0 left-0 w-6/12 h-screen">
         
            <h1>{pageName}</h1>
-           <Navigation pageName={pageName} />
+           <Navigation pageName={pageName} wide={'w-1/2'} />
            
 
            <div className="absolute bottom-0 border-black bg-white w-48 h-12  m-12 border-black border-2">
