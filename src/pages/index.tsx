@@ -5,14 +5,14 @@ import PicContainer from "../components/picContainer/PicContainer"
 import SEO from "../components/util/seo/Seo"
 
 const IndexPage = () => (
-  <Layout title="Porlio" pageName="Portfolio" description="neue Seite" type="kp" image="no">
-  
+  <Layout title="Portfolio" pageName="Portfolio" description="neue Seite" type="kp" image="no">
+
     <SEO title="SEO Title Home" metaDescription='SEO Desc Home' />
-    
-    <PicContainer/>
-    </Layout>
-   
- 
+
+    <PicContainer />
+  </Layout>
+
+
 )
 
 export default IndexPage

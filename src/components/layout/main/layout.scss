@@ -7,9 +7,9 @@ html{
     scroll-behaviour: smooth;
 }
 .breitelinks{
-    margin-left: 30% !important;
+   
     margin-right: 20px !important;
-    margin-top: 0%;
+    //margin-top: 0%;
 
 }
 
@@ -17,4 +17,14 @@ html{
 .rounded {
     border-top: 3px solid rgb(0, 0, 0);
     border-radius: 3px;
+  }
+
+  .abstandOben{
+      margin-top: 7.2rem;
+  }
+
+  .sticky-button{
+    position: sticky;
+    top: 80%; 
+    left:2%;
   }

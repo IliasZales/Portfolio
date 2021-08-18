@@ -29,18 +29,22 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
   <div className="min-h-screen " >
     <main>{children}</main>
     <div className=" flex flex-row  ">
-      <div className="flex flex-col bg-primary  w-10/12 ">
-
-        <h1>{pageName}</h1>
-        ´
-        <Navigation pageName={pageName} wide={'w-1/4'} />
+      <div className="flex flex-row bg-primary  w-10/12 ">
 
 
-        <div className="sticky border-black bg-white w-48 h-12   border-black border-2">
-          <h2 className="text-center text-2xl font-bold">Contact</h2>
+        <div className="w-1/3">
+          <h1>{pageName}</h1>
+
+          <Navigation pageName={pageName} wide={'w-1/1'} />
+
+
+          <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
+            <h2 className="text-center text-2xl font-bold">Contact</h2>
+          </div>
         </div>
 
-        <div className="overflow-scroll ">
+        <div className="overflow-scroll abstandOben">
+
           <Resume text1="BA Sc. Informationstechnologie" text2="Universität Hildesheim"></Resume>
           <Resume text1="Design and Management - Modelabel" text2="Binary-Cult"></Resume>
           <Resume text1="Administration und Webentwicklung" text2="TA WingTsun"></Resume>
