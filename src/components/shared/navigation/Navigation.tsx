@@ -19,10 +19,10 @@ const Navigation = (props: navigationProps) => {
 
   return (
 
-    <div className={`navPosi h-48 top-40 bg-secondary  justify-center ${props.wide}`} >
+    <div className={`navPosi h-64 top-40 bg-secondary  justify-center ${props.wide}`} >
 
-
-      <h3 className="text-white text-2xl text-left align-middle pb-6 pt-4 pl-10"><Link to="/timeline">Timeline</Link></h3>
+      <h3 className="text-white text-2xl text-left align-middle pb-6 pt-4 pl-10"><Link to="/">Home</Link></h3>
+      <h3 className="text-white text-2xl text-left align-middle pb-6  pl-10"><Link to="/timeline">Timeline</Link></h3>
       <h3 className="text-white text-2xl text-left align-middle pb-6 pl-10">Projects</h3>
       <h3 className="text-white text-2xl text-left align-middle pl-10 font_r">Experience</h3>
 

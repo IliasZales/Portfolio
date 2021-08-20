@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "/src/constants/style/variables.scss";
 
 html{
 
@@ -21,10 +22,16 @@ html{
 
   .abstandOben{
       margin-top: 7.2rem;
+      margin-left: 0px !important;
   }
 
   .sticky-button{
     position: sticky;
     top: 80%; 
     left:2%;
+  }
+
+  .bg-gradient{
+
+    background: linear-gradient(90deg, $blue 80%, $grey 20%);
   }
