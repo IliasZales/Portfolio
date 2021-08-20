@@ -29,7 +29,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
   <div className="min-h-screen " >
     <main>{children}</main>
 
-    <div className="flex flex-row bg-gradient  w-1/1  ">
+    <div className="flex flex-row bg-gradient min-h-screen w-1/1  ">
 
 
       <div className="w-1/3">
@@ -43,12 +43,15 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
         </div>
       </div>
 
-      <div className="overflow-scroll abstandOben w-2/3 ml-0">
+      <div className="overflow-scroll abstandOben w-3/4 ml-0">
 
-        <Resume text1="BA Sc. Informationstechnologie" text2="Universität Hildesheim"></Resume>
-        <Resume text1="Design and Management - Modelabel" text2="Binary-Cult"></Resume>
-        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun"></Resume>
-        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik"></Resume>
+        <Resume text1="BA Sc. Informationstechnologie" text2="Universität Hildesheim" start={"2018"} end={"2020"}></Resume>
+        <Resume text1="Design and Management - Modelabel" text2="Binary-Cult" start={"2019"} end={"2020"}></Resume>
+        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun" start={"2015"} end={"2015"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
 
       </div>
 
