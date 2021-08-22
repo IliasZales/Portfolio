@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+#bord1:hover{
+border-radius: 40px;
+transition: 1s;
+
+}
+
+
+#bord1:hover  #jahr-hover-id{
+    font-size:2rem;
+   
+    
+}
+    
