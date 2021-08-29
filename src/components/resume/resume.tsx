@@ -70,7 +70,7 @@ const Resume = ({ text1, text2, content, start, end }: IProps, { sizein, time, s
           style={{ maxHeight: `${height}` }}
           className="overflow-auto transition-max-height overflow-y-hidden duration-700"
         >
-          <div className="pl-10 pb-10">{content}  </div>
+          <div className="pl-10 pb-10 pr-10">{content}  </div>
         </div>
 
       </div>
