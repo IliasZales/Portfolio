@@ -45,13 +45,13 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
       <div className="overflow-scroll abstandOben w-3/4 ml-0">
 
-        <Resume text1="BA Sc. Informationstechnologie" text2="Universität Hildesheim" start={"2018"} end={"2020"}></Resume>
-        <Resume text1="Design and Management - Modelabel" text2="Binary-Cult" start={"2019"} end={"2020"}></Resume>
-        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun" start={"2015"} end={"2015"}></Resume>
-        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
-        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
-        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
-        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="BA Sc. Informationstechnologie" text2="Universität Hildesheim" content="neuer contetn heir habe ich das und das gemacht1" start={"2018"} end={"2020"}></Resume>
+        <Resume text1="Design and Management - Modelabel" text2="Binary-Cult" content="neuer contetn heir habe ich das und das gemacht2" start={"2019"} end={"2020"}></Resume>
+        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun" content="neuer contetn heir habe ich das und das gemacht3" start={"2015"} end={"2015"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" content="neuer contetn heir habe ich das und das gemacht4" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" content="neuer contetn heir habe ich das und das gemacht5" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" content="neuer contetn heir habe ich das und das gemacht6" start={"2012"} end={"2014"}></Resume>
+        <Resume text1="Studentische Aushilfskraft - Qualitätssicherung" text2="Finanzinformatik" content="neuer contetn heir habe ich das und das gemacht7" start={"2012"} end={"2014"}></Resume>
 
       </div>
 
