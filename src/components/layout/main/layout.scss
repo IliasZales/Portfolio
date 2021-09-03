@@ -35,6 +35,11 @@ html{
 
     background: linear-gradient(90deg, $blue 90%, $grey 10%);
   }
+  .bg-gradient-3{
+
+    background: linear-gradient(90deg, $grey 90%, $blue 10%);
+  }
+
 
   .position-left{
       left:82.5%;

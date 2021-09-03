@@ -23,7 +23,7 @@ interface Props {
 
 
 
-const Layout = ({ children, pageName, title, description, type, image }: Props) => (
+const LayoutTwo = ({ children, pageName, title, description, type, image }: Props) => (
 
 
   <div className="min-h-screen " >
@@ -36,7 +36,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
         <h1>{pageName}</h1>
 
 
-        <Navigation pageName={pageName} wide={'w-3/4'} />
+        <Navigation pageName={pageName} wide={'w-3/4'} color={'bg-secondary'} />
 
         <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
           <h2 className="text-center text-2xl font-bold">Contact</h2>
@@ -76,4 +76,4 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
 );
 
-export default Layout
+export default LayoutTwo
