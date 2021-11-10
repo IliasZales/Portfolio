@@ -29,7 +29,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
       <div className="bg-primary absolute top-0 left-0 w-6/12 h-screen">
 
         <h1>{pageName}</h1>
-        <Navigation pageName={pageName} wide={'w-1/2'} color={'bg-secondary'} />
+        <Navigation pageName={pageName} wide={'w-1/4'} color={'bg-secondary'} />
 
         <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
           <h2 className="text-center text-2xl font-bold">Contact</h2>

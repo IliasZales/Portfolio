@@ -33,20 +33,20 @@ const LayoutThree = ({ children, pageName, title, description, type, image }: Pr
         <main>{children}</main>
 
 
-        <div className="flex flex-row bg-gradient-3 min-h-screen w-1/1  ">
+        <div className="flex flex-row bg-gradient-3 min-h-screen w-1/1 overflow-y-hidden  ">
 
             <div className="w-1/3">
                 <h1>{pageName}</h1>
 
 
-                <Navigation pageName={pageName} wide={'w-3/4'} color={'bg-primary'} />
+                <Navigation pageName={pageName} wide={'w-1/4'} color={'bg-primary'} absolutePos={"absolute"} />
 
                 <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
                     <h2 className="text-center text-2xl font-bold">Contact</h2>
                 </div>
             </div>
 
-            <div className="overscroll-x-contain abstandOben w-3/4 ml-0">
+            <div className="overscroll-x-contain flex  abstandOben w-3/4 ml-0">
                 <div className='w-1/1 absolute top-0 text-right text-6xl position-left ' ><h1><span className='text-primary'>Pro</span><span className='text-secondary'>jects</span></h1></div>
 
 

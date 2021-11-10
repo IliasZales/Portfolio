@@ -27,14 +27,14 @@ const Card = ({ text1, text2, content, start, end }: IProps, { sizein, time, siz
     const [hoverFont, setHoverFont] = useState("1.5rem")
     const hoverStyles = {
         fontSize: `${hoverFont}`,
-        transition: "2s",
+        transition: "1s",
 
     }
 
 
     const rollupStyles = {
 
-        transition: "2s"
+        transition: "1s"
     }
 
     const [active, setActive] = useState(false)
@@ -54,11 +54,11 @@ const Card = ({ text1, text2, content, start, end }: IProps, { sizein, time, siz
     return (
 
 
-        <div className="flex flex-col ">
+        <div className="block">
 
             <div id="jahr-hover-id" className="text-2xl text-left text-white mt-6  jahr-hover" style={hoverStyles} >{start} - {end}</div>
             <div id="bord1" onClick={Object.assign(toggleAccordion, rollupStyles)} onMouseOver={() => setHoverFont("2rem")} onMouseOut={() => setHoverFont("1.5rem")}
-                className="border-black bg-white h-38 w-1/3 mb-8 mr-12 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius " >
+                className="border-black bg-white h-38 w-4/5 mb-8 mr-5 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius " >
 
                 <h2 className="text-center text-4xl font-bold mt-2">{text1}</h2>
 
