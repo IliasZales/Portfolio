@@ -46,7 +46,7 @@ const Card = ({ text1, text2, content, start, end }: IProps, { sizein, time, siz
         // @ts-ignore
         setHeight(active ? '0px' : `${contentSpace.current.scrollHeight}px`)    //`${contentSpace.current.scrollHeight}px`
         //  setRotate()
-        setTransition(active ? '2s' : '3s')
+        setTransition(active ? '1s' : '1s')
     }
 
 
