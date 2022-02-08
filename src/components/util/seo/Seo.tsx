@@ -8,7 +8,7 @@ interface Props {
   author?: string
 }
 
-function SEO({ metaDescription, lang='de', title, author='immajung' }: Props) {
+function SEO({ metaDescription, lang = 'de', title, author = 'iliasZales' }: Props) {
   return (
     <Helmet
       htmlAttributes={{

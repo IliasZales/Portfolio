@@ -12,16 +12,16 @@ module.exports = {
     },
     theme: {
       colors: {
-        blue:'#333333',
-        grey:'#ffed4a',
+        blue: '#333333',
+        grey: '#ffed4a',
       },
     },
-  
+
     theme: {
       inset: {
         '0': 0,
-       auto: 'auto',
-       '1/2': '50%',
+        auto: 'auto',
+        '1/2': '50%',
       },
     },
     extend: {

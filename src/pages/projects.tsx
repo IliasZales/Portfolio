@@ -6,9 +6,9 @@ import PicContainer from "../components/picContainer/PicContainer"
 import SEO from "../components/util/seo/Seo"
 
 const TimelinePage = () => (
-    <LayoutThree title="Timeline" pageName="Timeline" description="neue Seite" type="kp" image="no">
+    <LayoutThree title="Projects" pageName="Projects" description="neue Seite" type="kp" image="no">
 
-        <SEO title="Projects" metaDescription='SEO Desc Home' />
+        <SEO title="Projects" metaDescription='Ilias Zales Projects' />
 
 
     </LayoutThree>

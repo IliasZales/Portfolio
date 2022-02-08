@@ -1,18 +1,72 @@
 
+@import "/src/constants/style/variables.scss";
+.pic-background{
+    background: $blue;
+    background: -moz-linear-gradient(left, $blue 50%, $grey 50%);
+    background: -webkit-linear-gradient(left, $blue 50%, $grey 50%);
+    background: linear-gradient(to right, $blue 50%, $grey 50%);
+
+}
+.xing{
+    color: #b0d400;
+}
+.insta{
+    color:#713966;
+}
+.linked{
+    color:#0270ad;
+}
+.social-background{
+    background: $blue;
+    background: -moz-linear-gradient(left, $grey 50%, $blue 50%);
+    background: -webkit-linear-gradient(left, $grey 50%, $blue 50%);
+    background: linear-gradient(to right, $grey 50%, $blue 50%);
+
+}
+
 
 .hoehebildcontainer{
 
-    height: 790px;
+   //height: 85vh;
     
 }
 
 .hoeheklein{
 
-    height: 18.5vh;
+    height: 15vh;
 }
 
 .bildanpassung{
 
+
     
    // margin-bottom: 10px !important;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .hoehebildcontainer{
+
+       // height: 80.3vh;
+        
+    }
+  .row-exp{
+
+  //  width: 25vw !important;
+    position: relative !important;
+  //  left: 1rem !important;
+   flex-direction: column !important;
+  }
+    
+  
+  
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  
+    /* CSS */
+
+    .hoehebildcontainer{
+
+        //height: 46%;
+        
+    }
 }

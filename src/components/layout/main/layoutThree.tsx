@@ -39,7 +39,7 @@ const LayoutThree = ({ children, pageName, title, description, type, image }: Pr
                 <h1>{pageName}</h1>
 
 
-                <Navigation pageName={pageName} wide={'w-48'} color={'bg-primary'} absolutePos={"absolute"} />
+                <Navigation pageName={pageName} color={'bg-primary'} absolutePos={"absolute"} />
 
                 <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
                     <h2 className="text-center text-2xl font-bold">Contact</h2>

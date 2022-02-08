@@ -30,6 +30,17 @@ html{
     top: 80%; 
     left:2%;
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+    /* CSS */
+    .sticky-button{
+      position: sticky;
+      top: 80%; 
+      left:2%;
+      width: 80px;
+    }
+    
+  }
 
   .bg-gradient{
 
