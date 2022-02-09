@@ -17,3 +17,16 @@ transition: 1s;
     
 }
     
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    #bord1:hover  #jahr-hover-id{
+        font-size:1rem;
+       
+        
+    }
+    
+  }
+
+.justifynospace{
+    text-align-last: none  !important;
+}

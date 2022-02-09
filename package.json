@@ -25,6 +25,7 @@
     "react-collapse": "^5.1.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-responsive": "^9.0.0-beta.6",
     "sass": "^1.43.4"
   },
   "devDependencies": {

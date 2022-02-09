@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import MediaQuery from 'react-responsive'
 
 interface CollapseProps {
     title: React.ReactNode
@@ -15,7 +16,14 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
 
 
 
-    const [active, setActive] = useState(false)
+    const [width, setWidth] = useState<number>(window.innerWidth);
+
+
+    const [active, setActive] = useState(true)
+
+
+
+    console.log(active)
     const [height, setHeight] = useState('0px')
     const [rotate, setRotate] = useState('transform duration-700 ease')
 
@@ -34,29 +42,58 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
     }
 
     return (
-        <div className="flex flex-col">
-            <button
-                className="py-6  cursor-pointer  flex items-center "
-                onClick={toggleAccordion}
-            >
-                <p className="text-sm  md:text-xl  text-primary ">{title}</p>
 
-            </button>
-            <div
-                ref={contentSpace}
-                style={{ maxHeight: `${height}` }}
-                className="overflow-auto transition-max-height overflow-y-hidden duration-700 ease-in-out"
-            >
-                <div className="pb-10 flex flex-col">
-                    <div>{content1}</div>
-                    <div>{content2}</div>
-                    <div>{content3}</div>
-                    <div>{content4}</div>
-                    <div>{content5}</div>
-                    <div>{content6}</div>
-                    <div>{more}</div>
+        <div className="flex flex-col">
+            <MediaQuery maxDeviceWidth={1224}>
+                <button
+                    className="py-6  cursor-pointer  flex items-center "
+                    onClick={toggleAccordion}
+                >
+                    <p className="text-sm  md:text-xl  text-primary ">{title}</p>
+
+                </button>
+                <div
+                    ref={contentSpace}
+                    style={{ maxHeight: `${height}` }}
+                    className="overflow-auto transition-max-height overflow-y-hidden duration-700 ease-in-out"
+                >
+                    <div className="pb-10 flex flex-col">
+                        <div>{content1}</div>
+                        <div>{content2}</div>
+                        <div>{content3}</div>
+                        <div>{content4}</div>
+                        <div>{content5}</div>
+                        <div>{content6}</div>
+                        <div>{more}</div>
+                    </div>
                 </div>
-            </div>
+            </MediaQuery>
+            <MediaQuery minDeviceWidth={1224}>
+                <button
+                    className="py-6  cursor-pointer  flex items-center "
+                    onClick={toggleAccordion}
+                >
+                    <p className="text-sm  md:text-xl  text-primary ">{title}</p>
+
+                </button>
+                <div
+                    ref={contentSpace}
+                    style={{ maxHeight: `150px` }}
+                    className="overflow-auto transition-max-height overflow-y-hidden duration-700 ease-in-out"
+                >
+                    <div className="pb-10 flex flex-col">
+                        <div>{content1}</div>
+                        <div>{content2}</div>
+                        <div>{content3}</div>
+                        <div>{content4}</div>
+                        <div>{content5}</div>
+                        <div>{content6}</div>
+                        <div>{more}</div>
+                    </div>
+                </div>
+            </MediaQuery>
         </div>
+
+
     )
 }

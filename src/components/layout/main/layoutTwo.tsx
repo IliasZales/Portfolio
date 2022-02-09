@@ -37,14 +37,13 @@ const LayoutTwo = ({ children, pageName, title, description, type, image }: Prop
 
 
         <Navigation pageName={pageName} color={'bg-secondary'} />
-
-        <div className="sticky-button border-black bg-white w-48 h-12  border-black border-2">
-          <h2 className="text-center text-2xl font-bold">Contact</h2>
+        <div className="rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
+          <h2 className="text-center text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
         </div>
       </div>
 
       <div className="overflow-scroll abstandOben w-3/4 ml-0">
-        <div className='w-1/1 absolute top-0 text-right text-6xl position-left ' ><h1><span className='text-secondary'>Time</span><span className='text-primary'>line</span></h1></div>
+        <div className='w-1/1 absolute top-0 text-right text-2xl sm:text-6xl position-left ' ><h1><span className='text-secondary'>Time</span><span className='text-primary'>line</span></h1></div>
 
 
         <Resume text1="Freelancer als Software-Developer in der Frontend & Backend Entwicklung" text2="it-iz.de" content="Als Selbstständiger habe ich seit 2019 gestartet, nach meinem Bachelor startete ich bei einer Firma für die Herstellung von Möbeln. Danach folgten Aufträge für die Digitalisierung von Schulen, dabei wurde ein Video-KOnferenzraum entwickelt, wo die Schüler von Zuhause dem Unterricht im Klassenraum folgen konnten. Weitere Webentwicklungsaufträge folgten." start={"2019"} end={"2022"}></Resume>

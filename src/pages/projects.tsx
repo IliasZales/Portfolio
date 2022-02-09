@@ -8,7 +8,7 @@ import SEO from "../components/util/seo/Seo"
 const TimelinePage = () => (
     <LayoutThree title="Projects" pageName="Projects" description="neue Seite" type="kp" image="no">
 
-        <SEO title="Projects" metaDescription='Ilias Zales Projects' />
+        <SEO title="Projects Ilias Zales" metaDescription='Ilias Zales Projects' />
 
 
     </LayoutThree>
