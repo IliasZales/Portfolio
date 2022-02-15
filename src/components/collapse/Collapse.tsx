@@ -16,7 +16,7 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
 
 
 
-    const [width, setWidth] = useState<number>(window.innerWidth);
+    // const [width, setWidth] = useState<number>(window.innerWidth);
 
 
     const [active, setActive] = useState(true)
