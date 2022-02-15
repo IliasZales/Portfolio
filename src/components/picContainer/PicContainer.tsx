@@ -8,12 +8,9 @@ import '../../constants/style/variables.scss'
 
 const PicConatainer = () => {
 
-
-
   return (
 
     <div className=' pic-background w-full h-full flex flex-row justify-center items-center object-center'>
-
 
       <div className='  w-full  h-screen    z-10 lg:overflow-hidden' >
 
