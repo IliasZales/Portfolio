@@ -6,9 +6,9 @@ import PicContainer from "../components/picContainer/PicContainer"
 import SEO from "../components/util/seo/Seo"
 
 const TimelinePage = () => (
-  <LayoutTwo title="Timeline" pageName="Timeline" description="neue Seite" type="kp" image="no">
+  <LayoutTwo title="Timeline" pageName="Timeline" description="Timeline Ilias Zales" type="kp" image="no">
 
-    <SEO title="Timeline Ilia Zales" metaDescription='SEO Desc Home' />
+    <SEO title="Timeline Ilia Zales" metaDescription='Timeline Ilias Zales' />
 
 
   </LayoutTwo>

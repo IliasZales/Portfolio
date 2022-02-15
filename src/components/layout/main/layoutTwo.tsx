@@ -36,8 +36,8 @@ const LayoutTwo = ({ children, pageName, title, description, type, image }: Prop
         <h1>{pageName}</h1>
 
 
-        <Navigation pageName={pageName} color={'bg-secondary'} smallwidth={'w-60'} />
-        <div className="rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
+        <Navigation pageName={pageName} color={'bg-secondary'} mobilewidth={'w-30'} smallwidth={'w-60'} />
+        <div className=" inset-y-2/3  rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
           <h2 className="text-center text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
         </div>
       </div>
