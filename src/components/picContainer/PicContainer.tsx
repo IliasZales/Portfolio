@@ -17,7 +17,7 @@ const PicConatainer = () => {
         <div className='w-full  hoeheklein '>
           <div className='text-center sm:text-6xl text-4xl'><h1><span className='text-secondary '>Port</span><span className='text-primary'>folio</span></h1></div>
         </div>
-        <div className='w-full border-white border-4 hoehebildcontainer items-center rounded-t-xl    '>
+        <div className='w-full border-4 hoehebildcontainer items-center rounded-t-xl    '>
           <div className='text-center text-4xl tracking-wide text-white whitespace-normal '>Ilias Zales</div>
           <Image imageName='picfarbe_ili.png' maxWidth={650} className=' bildanpassung object-bottom  '
           />

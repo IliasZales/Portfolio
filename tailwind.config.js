@@ -1,4 +1,5 @@
 module.exports = {
+  content: ['./src/**/*.{html,js,tsx}'],
   screens: {
     sm: '575px',
     md: '768px',

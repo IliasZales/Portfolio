@@ -6,7 +6,10 @@ import NavItem from '../../../models/NavItem';
 import "./layout.scss"
 import { Collapse } from "../../collapse/Collapse"
 import PicConatainer from '../../picContainer/PicContainer'
-
+import BurgerMenue from "../../burgerMenue/BurgerMenue"
+import MediaQuery from "react-responsive";
+import "../../../assets/layout.d.ts"
+import Mail from "../../../assets/mail.svg"
 interface Props {
   children: ReactNode;
   pageName: string;
@@ -28,10 +31,22 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
       <div className=" h-sreen bg-primary  w-1/4 lg:w-1/3">
 
         <h1>{pageName}</h1>
-        <Navigation pageName={pageName} color={'bg-secondary'} smallwidth={'w-60'} mobilewidth={'w-30'} />
+        <MediaQuery maxDeviceWidth={1224}>
+          <BurgerMenue />
+        </MediaQuery>
 
-        <div className="inset-y-2/3  rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
-          <h2 className="text-center text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
+        <MediaQuery minDeviceWidth={1224}>
+          <Navigation pageName={pageName} color={'bg-secondary'} smallwidth={'sm:w-52'} mobilewidth={'w-30'} />
+        </MediaQuery>
+        <div className="inset-y-2/3 ml-8  flex text-center justify-center rounded-full sm:rounded-t-xl sm:rounded-b-xl  sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
+          <MediaQuery maxDeviceWidth={1224}>
+            <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
+          </MediaQuery>
+          <MediaQuery minDeviceWidth={1224}>
+            <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
+          </MediaQuery>
+
+
         </div>
       </div>
 

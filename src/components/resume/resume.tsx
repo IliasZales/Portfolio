@@ -56,11 +56,11 @@ const Resume = ({ text1, text2, content, start, end }: IProps, { sizein, time, s
 
     <div className="flex flex-col ">
 
-      <div id="jahr-hover-id" className="text-sm sm:text-2xl text-center text-white mt-6 ml-8 jahr-hover" style={hoverStyles} >{start} - {end}</div>
+      <div id="jahr-hover-id" className="text-xs sm:text-2xl text-center text-white mt-6 ml-8 jahr-hover" style={hoverStyles} >{start} - {end}</div>
       <div id="bord1" onClick={Object.assign(toggleAccordion, rollupStyles)} onMouseOver={() => setHoverFont("2rem")} onMouseOut={() => setHoverFont("1.5rem")}
-        className="border-black bg-white h-38 w-2/3 mb-8 mr-12 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius " >
+        className="border-black bg-white h-38 w-11/12 sm:w-2/3 mb-8 mr-12 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius " >
 
-        <h2 className="text-center text-md sm:text-4xl font-bold mt-2">{text1}</h2>
+        <h2 className="text-center text-md sm:text-4xl pl-2 pr-2 font-bold mt-2">{text1}</h2>
 
         <div className="rounded mx-64 my-4" ></div>
 

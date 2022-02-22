@@ -26,7 +26,7 @@ const Navigation = (props: navigationProps) => {
 
   return (
 
-    <div className={`rounded-r-xl   navPosi md:h-64 md:top-40 sm:h-24 sm:top-20 ${props.color} ${props.mobilewidth}   justify-center  sm:${props.smallwidth}    ${props.absolutePos}`} >
+    <div className={`rounded-r-xl   navPosi md:h-48 md:top-40 sm:h-24 sm:top-20 border-t-0  border-l-0 border-4 border-gray-50 border-opacity-60 ${props.color} ${props.mobilewidth}   justify-center ${props.smallwidth}    ${props.absolutePos}`} >
 
       <h3 className="text-white md:text-2xl sm:text-xl text-left align-middle pb-6 pt-4 pl-5 sm:pl-10"><Link to="/">Home</Link></h3>
       <h3 className="text-white md:text-2xl sm:text-xl text-left align-middle pb-6 pl-5 sm:pl-10"><Link to="/timeline">Timeline</Link></h3>
