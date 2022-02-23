@@ -1,7 +1,7 @@
 import React, { ClassType, useState } from 'react'
 import { Link } from 'gatsby'
 import '../burgerMenue/burgerMenue.scss'
-import { slide as Menu } from 'react-burger-menu'
+import { bubble as Menu } from 'react-burger-menu'
 
 interface IBurgerMenu {
 
