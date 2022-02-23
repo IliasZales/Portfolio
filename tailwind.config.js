@@ -1,5 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{html,js,tsx}'],
+  purge: {
+    content: ['./src/**/*.{html,js,tsx}'],
+    safelist: ['bg-primary', 'bg-secondary']
+  },
   screens: {
     sm: '575px',
     md: '768px',
