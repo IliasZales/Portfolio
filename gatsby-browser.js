@@ -5,4 +5,4 @@
  */
 
 // You can delete this file if you're not using it
-import "./src/components/layout/main/layout.scss"
+import "./src/components/layout/main/layout"
