@@ -32,7 +32,7 @@ class LocationHandler extends React.Component {
   render() {
     const { location } = this.props
 
-    if (!loader.isPageNotFound(location.pathname + location.search)) {
+    if (!loader.isPageNotFound(location.pathname)) {
       return (
         <EnsureResources location={location}>
           {locationAndPageResources => (
@@ -48,10 +48,8 @@ class LocationHandler extends React.Component {
                 >
                   <RouteHandler
                     path={encodeURI(
-                      (
-                        locationAndPageResources.pageResources.page.matchPath ||
+                      locationAndPageResources.pageResources.page.matchPath ||
                         locationAndPageResources.pageResources.page.path
-                      ).split(`?`)[0]
                     )}
                     {...this.props}
                     {...locationAndPageResources}

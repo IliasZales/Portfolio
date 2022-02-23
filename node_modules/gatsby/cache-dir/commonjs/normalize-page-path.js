@@ -3,26 +3,20 @@
 exports.__esModule = true;
 exports.default = void 0;
 
-var _default = pathAndSearch => {
-  if (pathAndSearch === undefined) {
-    return pathAndSearch;
-  }
-
-  let [path, search = ``] = pathAndSearch.split(`?`);
-
-  if (search) {
-    search = `?` + search;
+var _default = path => {
+  if (path === undefined) {
+    return path;
   }
 
   if (path === `/`) {
-    return `/` + search;
+    return `/`;
   }
 
   if (path.charAt(path.length - 1) === `/`) {
-    return path.slice(0, -1) + search;
+    return path.slice(0, -1);
   }
 
-  return path + search;
+  return path;
 };
 
 exports.default = _default;

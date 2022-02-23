@@ -3,7 +3,7 @@ const path = require(`path`)
 const {
   renderToString,
   renderToStaticMarkup,
-  renderToPipeableStream,
+  pipeToNodeWritable,
 } = require(`react-dom/server`)
 const { ServerLocation, Router, isRedirect } = require(`@gatsbyjs/reach-router`)
 const merge = require(`deepmerge`)
@@ -13,7 +13,7 @@ const { WritableAsPromise } = require(`./server-utils/writable-as-promise`)
 
 const { RouteAnnouncerProps } = require(`./route-announcer-props`)
 const { apiRunner, apiRunnerAsync } = require(`./api-runner-ssr`)
-const asyncRequires = require(`$virtual/async-requires`)
+const syncRequires = require(`$virtual/sync-requires`)
 const { version: gatsbyVersion } = require(`gatsby/package.json`)
 const { grabMatchParams } = require(`./find-path`)
 
@@ -111,7 +111,6 @@ export default async function staticPage({
   reversedStyles,
   reversedScripts,
   inlinePageData = false,
-  webpackCompilationHash,
 }) {
   // for this to work we need this function to be sync or at least ensure there is single execution of it at a time
   global.unsafeBuiltinUsage = []
@@ -210,7 +209,6 @@ export default async function staticPage({
     const pageDataUrl = getPageDataUrl(pagePath)
 
     const { componentChunkName, staticQueryHashes = [] } = pageData
-    const pageComponent = await asyncRequires.components[componentChunkName]()
 
     const staticQueryUrls = staticQueryHashes.map(getStaticQueryUrl)
 
@@ -225,7 +223,10 @@ export default async function staticPage({
           },
         }
 
-        const pageElement = createElement(pageComponent.default, props)
+        const pageElement = createElement(
+          syncRequires.components[componentChunkName],
+          props
+        )
 
         const wrappedPage = apiRunner(
           `wrapPageElement`,
@@ -280,14 +281,18 @@ export default async function staticPage({
     if (!bodyHtml) {
       try {
         // react 18 enabled
-        if (renderToPipeableStream) {
+        if (pipeToNodeWritable) {
           const writableStream = new WritableAsPromise()
-          const { pipe } = renderToPipeableStream(bodyComponent, {
-            onCompleteAll() {
-              pipe(writableStream)
-            },
-            onError() {},
-          })
+          const { startWriting } = pipeToNodeWritable(
+            bodyComponent,
+            writableStream,
+            {
+              onCompleteAll() {
+                startWriting()
+              },
+              onError() {},
+            }
+          )
 
           bodyHtml = await writableStream
         } else {
@@ -389,7 +394,7 @@ export default async function staticPage({
     })
 
     // Add page metadata for the current page
-    const windowPageData = `/*<![CDATA[*/window.pagePath="${pagePath}";window.___webpackCompilationHash="${webpackCompilationHash}";${
+    const windowPageData = `/*<![CDATA[*/window.pagePath="${pagePath}";${
       inlinePageData ? `window.pageData=${JSON.stringify(pageData)};` : ``
     }/*]]>*/`
 
@@ -444,16 +449,6 @@ export default async function staticPage({
 
     postBodyComponents.push(...bodyScripts)
 
-    // Reorder headComponents so meta tags are always at the top and aren't missed by crawlers
-    // by being pushed down by large inline styles, etc.
-    // https://github.com/gatsbyjs/gatsby/issues/22206
-    headComponents.sort((a, b) => {
-      if (a.type && a.type === `meta`) {
-        return -1
-      }
-      return 0
-    })
-
     apiRunner(`onPreRenderHTML`, {
       getHeadComponents,
       replaceHeadComponents,
@@ -483,8 +478,4 @@ export default async function staticPage({
     e.unsafeBuiltinsUsage = global.unsafeBuiltinUsage
     throw e
   }
-}
-
-export function getPageChunk({ componentChunkName }) {
-  return asyncRequires.components[componentChunkName]()
 }

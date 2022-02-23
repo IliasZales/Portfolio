@@ -24,16 +24,13 @@ const stripSurroundingSlashes = s => {
   return s
 }
 
-const createPageDataUrl = rawPath => {
-  const [path, maybeSearch] = rawPath.split(`?`)
+const createPageDataUrl = path => {
   const fixedPath = path === `/` ? `index` : stripSurroundingSlashes(path)
-  return `${__PATH_PREFIX__}/page-data/${fixedPath}/page-data.json${
-    maybeSearch ? `?${maybeSearch}` : ``
-  }`
+  return `${__PATH_PREFIX__}/page-data/${fixedPath}/page-data.json`
 }
 
 function doFetch(url, method = `GET`) {
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     const req = new XMLHttpRequest()
     req.open(method, url, true)
     req.onreadystatechange = () => {
@@ -67,7 +64,6 @@ const toPageResources = (pageData, component = null) => {
     webpackCompilationHash: pageData.webpackCompilationHash,
     matchPath: pageData.matchPath,
     staticQueryHashes: pageData.staticQueryHashes,
-    getServerDataError: pageData.getServerDataError,
   }
 
   return {
@@ -98,8 +94,6 @@ export class BaseLoader {
     this.inFlightDb = new Map()
     this.staticQueryDb = {}
     this.pageDataDb = new Map()
-    this.isPrefetchQueueRunning = false
-    this.prefetchQueued = []
     this.prefetchTriggered = new Set()
     this.prefetchCompleted = new Set()
     this.loadComponent = loadComponent
@@ -147,11 +141,6 @@ export class BaseLoader {
             throw new Error(`not a valid pageData response`)
           }
 
-          const maybeSearch = pagePath.split(`?`)[1]
-          if (maybeSearch && !jsonPayload.path.includes(maybeSearch)) {
-            jsonPayload.path += `?${maybeSearch}`
-          }
-
           return Object.assign(loadObj, {
             status: PageResourceStatus.Success,
             payload: jsonPayload,
@@ -163,8 +152,8 @@ export class BaseLoader {
 
       // Handle 404
       if (status === 404 || status === 200) {
-        // If the request was for a 404/500 page and it doesn't exist, we're done
-        if (pagePath === `/404.html` || pagePath === `/500.html`) {
+        // If the request was for a 404 page and it doesn't exist, we're done
+        if (pagePath === `/404.html`) {
           return Object.assign(loadObj, {
             status: PageResourceStatus.Error,
           })
@@ -179,12 +168,9 @@ export class BaseLoader {
 
       // handle 500 response (Unrecoverable)
       if (status === 500) {
-        return this.fetchPageDataJson(
-          Object.assign(loadObj, {
-            pagePath: `/500.html`,
-            internalServerError: true,
-          })
-        )
+        return Object.assign(loadObj, {
+          status: PageResourceStatus.Error,
+        })
       }
 
       // Handle everything else, including status === 0, and 503s. Should retry
@@ -398,90 +384,32 @@ export class BaseLoader {
 
   prefetch(pagePath) {
     if (!this.shouldPrefetch(pagePath)) {
-      return {
-        then: resolve => resolve(false),
-        abort: () => {},
-      }
-    }
-    if (this.prefetchTriggered.has(pagePath)) {
-      return {
-        then: resolve => resolve(true),
-        abort: () => {},
-      }
+      return false
     }
 
-    const defer = {
-      resolve: null,
-      reject: null,
-      promise: null,
+    // Tell plugins with custom prefetching logic that they should start
+    // prefetching this path.
+    if (!this.prefetchTriggered.has(pagePath)) {
+      this.apiRunner(`onPrefetchPathname`, { pathname: pagePath })
+      this.prefetchTriggered.add(pagePath)
     }
-    defer.promise = new Promise((resolve, reject) => {
-      defer.resolve = resolve
-      defer.reject = reject
-    })
-    this.prefetchQueued.push([pagePath, defer])
-    const abortC = new AbortController()
-    abortC.signal.addEventListener(`abort`, () => {
-      const index = this.prefetchQueued.findIndex(([p]) => p === pagePath)
-      // remove from the queue
-      if (index !== -1) {
-        this.prefetchQueued.splice(index, 1)
+
+    // If a plugin has disabled core prefetching, stop now.
+    if (this.prefetchDisabled) {
+      return false
+    }
+
+    const realPath = findPath(pagePath)
+    // Todo make doPrefetch logic cacheable
+    // eslint-disable-next-line consistent-return
+    this.doPrefetch(realPath).then(() => {
+      if (!this.prefetchCompleted.has(pagePath)) {
+        this.apiRunner(`onPostPrefetchPathname`, { pathname: pagePath })
+        this.prefetchCompleted.add(pagePath)
       }
     })
 
-    if (!this.isPrefetchQueueRunning) {
-      this.isPrefetchQueueRunning = true
-      setTimeout(() => {
-        this._processNextPrefetchBatch()
-      }, 3000)
-    }
-
-    return {
-      then: (resolve, reject) => defer.promise.then(resolve, reject),
-      abort: abortC.abort.bind(abortC),
-    }
-  }
-
-  _processNextPrefetchBatch() {
-    const idleCallback = window.requestIdleCallback || (cb => setTimeout(cb, 0))
-
-    idleCallback(() => {
-      const toPrefetch = this.prefetchQueued.splice(0, 4)
-      const prefetches = Promise.all(
-        toPrefetch.map(([pagePath, dPromise]) => {
-          // Tell plugins with custom prefetching logic that they should start
-          // prefetching this path.
-          if (!this.prefetchTriggered.has(pagePath)) {
-            this.apiRunner(`onPrefetchPathname`, { pathname: pagePath })
-            this.prefetchTriggered.add(pagePath)
-          }
-
-          // If a plugin has disabled core prefetching, stop now.
-          if (this.prefetchDisabled) {
-            return dPromise.resolve(false)
-          }
-
-          return this.doPrefetch(findPath(pagePath)).then(() => {
-            if (!this.prefetchCompleted.has(pagePath)) {
-              this.apiRunner(`onPostPrefetchPathname`, { pathname: pagePath })
-              this.prefetchCompleted.add(pagePath)
-            }
-
-            dPromise.resolve(true)
-          })
-        })
-      )
-
-      if (this.prefetchQueued.length) {
-        prefetches.then(() => {
-          setTimeout(() => {
-            this._processNextPrefetchBatch()
-          }, 3000)
-        })
-      } else {
-        this.isPrefetchQueueRunning = false
-      }
-    })
+    return true
   }
 
   doPrefetch(pagePath) {
@@ -578,7 +506,7 @@ export class ProdLoader extends BaseLoader {
     super(loadComponent, matchPaths)
 
     if (pageData) {
-      this.pageDataDb.set(findPath(pageData.path), {
+      this.pageDataDb.set(pageData.path, {
         pagePath: pageData.path,
         payload: pageData,
         status: `success`,

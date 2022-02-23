@@ -3,8 +3,6 @@ import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { merge } from "lodash"
 import { apiRunner } from "./api-runner-ssr"
-import asyncRequires from "$virtual/async-requires"
-
 // import testRequireError from "./test-require-error"
 // For some extremely mysterious reason, webpack adds the above module *after*
 // this module so that when this code runs, testRequireError is undefined.
@@ -126,8 +124,4 @@ export default ({ pagePath }) => {
   htmlStr = `<!DOCTYPE html>${htmlStr}`
 
   return htmlStr
-}
-
-export function getPageChunk({ componentChunkName }) {
-  return asyncRequires.components[componentChunkName]()
 }
