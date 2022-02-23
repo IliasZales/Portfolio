@@ -6,7 +6,7 @@ import NavItem from '../../../models/NavItem';
 
 
 interface navigationProps {
-  mobilewidth: String;
+  mobilewidth?: String;
   smallwidth: String;
   pageName: String;
   //wide: String;

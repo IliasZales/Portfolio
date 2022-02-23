@@ -19,7 +19,7 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
     // const [width, setWidth] = useState<number>(window.innerWidth);
 
 
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
 
 
@@ -47,7 +47,7 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
             <MediaQuery maxDeviceWidth={1224}>
                 <button
                     className="py-6  cursor-pointer  flex items-center "
-                    onClick={toggleAccordion}
+                    onClick={() => toggleAccordion()}
                 >
                     <p className="text-sm  md:text-xl  text-primary ">{title}</p>
 
@@ -71,7 +71,7 @@ export const Collapse: React.FC<CollapseProps> = ({ title, content1, content2, c
             <MediaQuery minDeviceWidth={1224}>
                 <button
                     className="py-6  cursor-pointer  flex items-center "
-                    onClick={toggleAccordion}
+                    onClick={() => toggleAccordion()}
                 >
                     <p className="text-sm  md:text-xl  text-primary ">{title}</p>
 

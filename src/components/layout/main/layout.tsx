@@ -36,7 +36,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
         </MediaQuery>
 
         <MediaQuery minDeviceWidth={1224}>
-          <Navigation pageName={pageName} color={'bg-secondary'} smallwidth={'sm:w-52'} mobilewidth={'w-30'} />
+          <Navigation pageName={pageName} color={'bg-secondary'} smallwidth={'sm:w-52'} />
         </MediaQuery>
         <div className="inset-y-2/3 ml-8  flex text-center justify-center rounded-full sm:rounded-t-xl sm:rounded-b-xl  sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
           <MediaQuery maxDeviceWidth={1224}>
