@@ -9,6 +9,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-helmet": "^6.1.5",
     "autoprefixer": "^10.4.2",
+    "babel-plugin-styled-components": "^2.0.5",
     "gatsby": "^4.8.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.7.0",
@@ -17,6 +18,7 @@
     "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-sass": "^5.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-plugin-styled-components": "^5.8.0",
     "gatsby-plugin-typescript": "^4.7.0",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
@@ -28,9 +30,11 @@
     "react-helmet": "^6.1.0",
     "react-responsive": "^9.0.0-beta.6",
     "react-scroll-horizontal": "^1.6.6",
-    "sass": "^1.49.8"
+    "sass": "^1.49.8",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.23",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "eslint": "^8.9.0",

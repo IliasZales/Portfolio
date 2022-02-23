@@ -10,6 +10,8 @@ import BurgerMenue from "../../burgerMenue/BurgerMenue"
 import MediaQuery from "react-responsive";
 import "../../../assets/layout.d.ts"
 import Mail from "../../../assets/mail.svg"
+import styled from "styled-components"
+
 interface Props {
   children: ReactNode;
   pageName: string;
@@ -21,6 +23,21 @@ interface Props {
 
 }
 
+const FirstConatiner = styled.div`
+
+width: 33.33%;
+height: 100vh;
+background: #8AA7B4;
+`
+
+const FirstConatinermobile = styled.div`
+
+width: 25%;
+height: 100vh;
+background: #8AA7B4;
+`
+
+
 const Layout = ({ children, pageName, title, description, type, image }: Props) => (
 
 
@@ -31,7 +48,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
 
       <MediaQuery maxDeviceWidth={1224}>
-        <div className=" h-sreen hintergrund bg-primary  w-1/4 ">
+        <FirstConatinermobile >
 
           <h1>{pageName}</h1>
 
@@ -41,10 +58,10 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
             <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
 
           </div>
-        </div>
+        </FirstConatinermobile>
       </MediaQuery>
       <MediaQuery minDeviceWidth={1224}>
-        <div className=" h-sreen hintergrund bg-primary w-1/3">
+        <FirstConatiner className=" h-sreen w-1/3">
           <h1>{pageName}</h1>
 
 
@@ -52,7 +69,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
           <div className="  inset-y-2/3 	 fixed rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
             <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
           </div>
-        </div>
+        </FirstConatiner>
       </MediaQuery>
 
 
