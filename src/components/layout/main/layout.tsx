@@ -28,6 +28,9 @@ const FirstConatiner = styled.div`
 width: 33.33%;
 height: 100vh;
 background: #8AA7B4;
+@media (max-width: 1224px) {
+  display none;
+}
 `
 
 const FirstConatinermobile = styled.div`
@@ -35,6 +38,9 @@ const FirstConatinermobile = styled.div`
 width: 25%;
 height: 100vh;
 background: #8AA7B4;
+@media (min-width: 1224px) {
+  display none;
+}
 `
 
 
@@ -47,30 +53,29 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
 
 
-      <MediaQuery maxDeviceWidth={1224}>
-        <FirstConatinermobile >
 
-          <h1>{pageName}</h1>
+      <FirstConatinermobile >
 
-          <BurgerMenue />
+        <h1>{pageName}</h1>
 
-          <div className="  inset-y-2/3  ml-4  flex text-center justify-center rounded-full	 fixed   sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
-            <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
+        <BurgerMenue />
 
-          </div>
-        </FirstConatinermobile>
-      </MediaQuery>
-      <MediaQuery minDeviceWidth={1224}>
-        <FirstConatiner className=" h-sreen w-1/3">
-          <h1>{pageName}</h1>
+        <div className="  inset-y-2/3  ml-4  flex text-center justify-center rounded-full	 fixed   sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
+          <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
+
+        </div>
+      </FirstConatinermobile>
+
+      <FirstConatiner className=" h-sreen w-1/3">
+        <h1>{pageName}</h1>
 
 
-          <Navigation pageName={pageName} color={'bg-secondary'} mobilewidth={'sm:w-52'} smallwidth={'w-full'} />
-          <div className="  inset-y-2/3 	 fixed rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
-            <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
-          </div>
-        </FirstConatiner>
-      </MediaQuery>
+        <Navigation pageName={pageName} color={'bg-secondary'} mobilewidth={'sm:w-52'} smallwidth={'w-full'} />
+        <div className="  inset-y-2/3 	 fixed rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
+          <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de">Contact</a></h2>
+        </div>
+      </FirstConatiner>
+
 
 
 
