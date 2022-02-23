@@ -2258,9 +2258,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resume_resume__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../resume/resume */ "./src/components/resume/resume.tsx");
 /* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../card/card */ "./src/components/card/card.tsx");
 /* harmony import */ var react_scroll_horizontal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-scroll-horizontal */ "./node_modules/react-scroll-horizontal/dist/index.es.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-responsive */ "./node_modules/react-responsive/dist/react-responsive.js");
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _burgerMenue_BurgerMenue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../burgerMenue/BurgerMenue */ "./src/components/burgerMenue/BurgerMenue.tsx");
+/* harmony import */ var _assets_mail_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../assets/mail.svg */ "./src/assets/mail.svg");
+/* harmony import */ var _assets_mail_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_mail_svg__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -2281,17 +2284,19 @@ const LayoutThree = ({
   className: "min-h-screen "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "flex flex-row bg-gradient-3 min-h-screen w-1/1 overflow-y-hidden overflow-x-hidden  "
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_8___default()), {
   maxDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "w-24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, pageName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_burgerMenue_BurgerMenue__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  className: "  inset-y-2/3 \t fixed rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-primary hover:text-white border-black border-2"
+  className: "  inset-y-2/3  ml-4  flex text-center justify-center rounded-full\t fixed   sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-primary hover:text-white border-black border-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
   className: "text-center pt-1 text-sm sm:text-2xl font-bold "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "mailto:info@it-iz.de"
-}, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_assets_mail_svg__WEBPACK_IMPORTED_MODULE_7___default()), {
+  className: "w-8 h-8 pt-1"
+})))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_8___default()), {
   minDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "w-52"
@@ -2306,7 +2311,7 @@ const LayoutThree = ({
   className: "text-center pt-1 text-sm sm:text-2xl font-bold "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "mailto:info@it-iz.de"
-}, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
+}, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_8___default()), {
   maxDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "flex flex-col abstandOben w-3/4 ml-0 overflow-x-hidden"
@@ -2340,7 +2345,7 @@ const LayoutThree = ({
   content: "Zur Zeit von Corona ergab sich die M\xF6glichkeit zur er\xF6ffnung eines eigenen Testzentrums. Die Software wurde dabei von der Agntur Montary-Agency zur verf\xFCgung gestellt, ich \xFCbernahm das Management f\xFCr Standort und Vertrieb.",
   projectart: 'Testzentrum',
   imageCard: "picfarbe_ili.png"
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_8___default()), {
   minDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   className: "overscroll-x-contain flex  abstandOben w-3/4 ml-0"
@@ -2455,16 +2460,16 @@ const Resume = ({
     className: "flex flex-col "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "jahr-hover-id",
-    className: "text-sm sm:text-2xl text-center text-white mt-6 ml-8 jahr-hover",
+    className: "text-xs sm:text-2xl text-center text-white mt-6 ml-8 jahr-hover",
     style: hoverStyles
   }, start, " - ", end), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "bord1",
     onClick: Object.assign(toggleAccordion, rollupStyles),
     onMouseOver: () => setHoverFont("2rem"),
     onMouseOut: () => setHoverFont("1.5rem"),
-    className: "border-black bg-white h-38 w-2/3 mb-8 mr-12 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius "
+    className: "border-black bg-white h-38 w-11/12 sm:w-2/3 mb-8 mr-12 breitelinks border-black border-2 z-10 ml-0 hover:bg-opacity-40 hover:border-white hover-radius "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "text-center text-md sm:text-4xl font-bold mt-2"
+    className: "text-center text-md sm:text-4xl pl-2 pr-2 font-bold mt-2"
   }, text1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "rounded mx-64 my-4"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
@@ -43412,6 +43417,27 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 });
 
 module.exports = Snap
+
+
+/***/ }),
+
+/***/ "./src/assets/mail.svg":
+/*!*****************************!*\
+  !*** ./src/assets/mail.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var React = __webpack_require__(/*! react */ "react");
+
+function Mail (props) {
+    return React.createElement("svg",props,[React.createElement("g",{"key":0},React.createElement("g",null,React.createElement("path",{"d":"M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121\r\n\t\t\tC512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18\r\n\t\t\ts-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z\r\n\t\t\t M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939\r\n\t\t\tl22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z"}))),React.createElement("g",{"key":1}),React.createElement("g",{"key":2}),React.createElement("g",{"key":3}),React.createElement("g",{"key":4}),React.createElement("g",{"key":5}),React.createElement("g",{"key":6}),React.createElement("g",{"key":7}),React.createElement("g",{"key":8}),React.createElement("g",{"key":9}),React.createElement("g",{"key":10}),React.createElement("g",{"key":11}),React.createElement("g",{"key":12}),React.createElement("g",{"key":13}),React.createElement("g",{"key":14}),React.createElement("g",{"key":15})]);
+}
+
+Mail.defaultProps = {"version":"1.1","id":"Capa_1","x":"0px","y":"0px","viewBox":"0 0 512 512","style":{"enableBackground":"new 0 0 512 512"},"xmlSpace":"preserve"};
+
+module.exports = Mail;
+
+Mail.default = Mail;
 
 
 /***/ }),

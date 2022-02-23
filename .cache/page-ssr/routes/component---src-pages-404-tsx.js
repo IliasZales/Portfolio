@@ -534,7 +534,7 @@ const Collapse = ({
   const {
     0: active,
     1: setActive
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   console.log(active);
   const {
     0: height,
@@ -559,7 +559,7 @@ const Collapse = ({
     maxDeviceWidth: 1224
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     className: "py-6  cursor-pointer  flex items-center ",
-    onClick: toggleAccordion
+    onClick: () => toggleAccordion()
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-sm  md:text-xl  text-primary "
   }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -574,7 +574,7 @@ const Collapse = ({
     minDeviceWidth: 1224
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     className: "py-6  cursor-pointer  flex items-center ",
-    onClick: toggleAccordion
+    onClick: () => toggleAccordion()
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-sm  md:text-xl  text-primary "
   }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -643,17 +643,18 @@ const Layout = ({
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_shared_navigation_Navigation__WEBPACK_IMPORTED_MODULE_1__["default"], {
   pageName: pageName,
   color: 'bg-secondary',
-  smallwidth: 'sm:w-52',
-  mobilewidth: 'w-30'
+  smallwidth: 'sm:w-52'
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-  className: "inset-y-2/3  rounded-t-xl rounded-b-xl  sticky-button border-black bg-white w-18 sm:w-48 h-8 sm:h-12 hover:bg-secondary hover:text-white border-black border-2"
+  className: "inset-y-2/3 ml-8  flex text-center justify-center rounded-full sm:rounded-t-xl sm:rounded-b-xl  sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-secondary hover:text-white border-black border-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
   maxDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
   className: "text-center pt-1 text-sm sm:text-2xl font-bold "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "mailto:info@it-iz.de"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_assets_mail_svg__WEBPACK_IMPORTED_MODULE_6___default()), null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_assets_mail_svg__WEBPACK_IMPORTED_MODULE_6___default()), {
+  className: "w-8 h-8 pt-1"
+})))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react_responsive__WEBPACK_IMPORTED_MODULE_7___default()), {
   minDeviceWidth: 1224
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
   className: "text-center pt-1 text-sm sm:text-2xl font-bold "
