@@ -31,7 +31,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
 
       <MediaQuery maxDeviceWidth={1224}>
-        <div className=" h-sreen bg-primary w-1/3">
+        <div className=" h-sreen bg-primary  w-1/4 ">
 
           <h1>{pageName}</h1>
 
@@ -44,7 +44,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
         </div>
       </MediaQuery>
       <MediaQuery minDeviceWidth={1224}>
-        <div className=" h-sreen bg-primary  w-1/4 ">
+        <div className=" h-sreen bg-primary w-1/3">
           <h1>{pageName}</h1>
 
 
