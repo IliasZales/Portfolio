@@ -71,7 +71,7 @@ const Card = ({ text1, text2, content, start, end, projectart, imageCard }: IPro
 
 
                     </div>
-                    <Image imageName={imageCard} maxWidth={250} className='   '></Image>
+                    <Image imageName={imageCard} maxWidth={550} className='   '></Image>
 
                     <h3 className="text-center text-2xl mb-2 ">{text2}</h3>
                     <div
@@ -95,7 +95,7 @@ const Card = ({ text1, text2, content, start, end, projectart, imageCard }: IPro
 
 
                     </div>
-                    <Image imageName={imageCard} maxWidth={250} className='   '></Image>
+                    <Image imageName={imageCard} maxWidth={300} className='   '></Image>
 
                     <h3 className="text-center text-2xl mb-2 ">{text2}</h3>
                     <div

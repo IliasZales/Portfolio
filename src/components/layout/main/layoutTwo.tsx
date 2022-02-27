@@ -40,7 +40,7 @@ const LayoutTwo = ({ children, pageName, title, description, type, image }: Prop
 
 
           <BurgerMenue />
-          <div className=" inset-y-2/3   ml-4  flex text-center justify-center rounded-full  sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
+          <div className=" inset-y-2/3   ml-4  flex text-center justify-center rounded-full  sticky-button border-black bg-white w-12 lg:w-48 h-12 sm:h-12 hover:bg-secondary hover:text-white border-black border-2">
             <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
           </div>
         </div>
@@ -59,16 +59,17 @@ const LayoutTwo = ({ children, pageName, title, description, type, image }: Prop
 
 
       <div className="overflow-scroll abstandOben w-3/4 -ml-4">
-        <div className='w-1/1 absolute top-0 text-right text-l sm:text-6xl position-left ' ><h1><span className='text-secondary'>Time</span><span className='text-primary'>line</span></h1></div>
+        <div className='w-1/1    absolute top-0 text-right text-m sm:text-xl md:text-4xl lg:text-6xl position-left  overflow-x-hidden' ><h1><span className='text-white'>Timeline</span></h1></div>
 
 
-        <Resume text1="Freelancer als Software-Developer in der Frontend & Backend Entwicklung" text2="it-iz.de" content="Als Selbstständiger habe ich seit 2019 gestartet, nach meinem Bachelor startete ich bei einer Firma für die Herstellung von Möbeln. Danach folgten Aufträge für die Digitalisierung von Schulen, dabei wurde ein Video-KOnferenzraum entwickelt, wo die Schüler von Zuhause dem Unterricht im Klassenraum folgen konnten. Weitere Webentwicklungsaufträge folgten." start={"2019"} end={"2022"}></Resume>
-        <Resume text1="Design and Management - Modelabel" text2="Binary-Cult" content="Dieses Projekt enstand durch das Interesse an Mode, einige alte Kommulitonen und ich erstellten unser eigenes Modelabel für coole Kleidung die Entwickler und Tech interissierte tragen wollen." start={"2019"} end={"2022"}></Resume>
-        <Resume text1="Software-Developer Frontend & Backend-Entwicklung" text2="Marketing Agentur Montary-Agency" content="Für die Agentur Montary-Agency arbeitete ich ein Jahr, als Forn & Backend entwickler, dabei waren die meisten Aufträge als Frontend entwickler mit React und Typescript." start={"2021"} end={"2022"}></Resume>
-        <Resume text1="Trainer für Kinder Und Erwachsene (Kampfkunst)" text2="TA WingTsun (Kampfkunst)" content="Mit 11 Jahren fing ich die Kampfkunst TA WingTsun an, diese begleitet mich also schon mein lebenlang, schnell wurde mir klar, dass ein draht zu kindern und Jugendliche habe, deshalb entschied ich mich mit 14 Jahren als Assisten im Kindertraining mitzuwirken, nach der Ausbildung als Trainer konnte ich eigenverantwortlich unter der Leitung meines Si-Fu's (Lehrer) Kinder und Erwachsenenkurse in Hannover leiten, ich durfte außerdem an vielen Kursen für Schulen und öffentlichen Einrichtungen Kurse für Gewaltprävention und Sicheheit leiten.  " start={"2016"} end={"2022"}></Resume>
-        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun (Kampfkunst)" content="Als Trainer für Kinder und Erwachsene im TA WingTsun übernahm ich auch die Webentwicklung und den Internetauftritt." start={"2018"} end={"2020"}></Resume>
-        <Resume text1="Qualitätsmanagement" text2="Finanzinformatik" content="Als Werkstudent habe ich in der Finanzinformatik für die Qualitätsicherung an der IF6 gearbeitet. Meine Aufgaben waren Testdurchführungen und Loganalyse für die Internet-Filiale durchzuführen." start={"2017"} end={"2018"}></Resume >
-        <Resume text1="Geschäftsführer eines Bistros" text2="Blauen See Garbsen" content="In jungen Jahren übernham ich die Verantwortung eines der Lokale meiner Familie, dies stärkte mich schon Selbständig zu organisieren und zu Leiten, stress war bei dieser Arbeit Tagesordnung." start={"2014"} end={"2015"}></Resume>
+        <Resume text1="Freelancer as Software-Developer in  Frontend & Backend Freelancer Development" text2="it-iz.de" content="I have been working as a self-employed since 2019. After getting my bachelor’s degree, i had my first job as freelance in a company of furniture. Next followed a project made for schools. A video conference room where students joing their classes from home." start={"2019"} end={"2022"}></Resume>
+        <Resume text1="Design and Management - Fashionlabel" text2="Binary-Cult" content="A project created by friends and myself. Our own fashion label for clothes which software and web developers are interested to." start={"2019"} end={"2022"}></Resume>
+        <Resume text1="Part owner and Management" text2="Testpoint-Hannover - Test Center for Covid-19" content="At the time of Corona, the opportunity arose to open our own test center. The software was provided by the Agntur Montary-Agency, I took over the management for location and sales." start={"2021"} end={"2022"}></Resume>
+        <Resume text1="Software-Developer Frontend & Backend-Developer" text2="Marketing Agency - Montary-Agency" content="I was part of the Montary-Agency team, working as a frontend and backend developer for one year. Most of the projects having me as a frontend developer, using React and Typescript." start={"2021"} end={"2022"}></Resume>
+        <Resume text1="Trainer for children and adults (martial arts)" text2="TA WingTsun (martial arts)" content="At the age of  11 started the martial art called, TA WingTsun. Three years later bacame a training assistant for children. Under my Si-Fu's (teacher) direction i am giving courses to adults in Hanover. I am able to lead courses to primary and secondary schools. " start={"2016"} end={"2022"}></Resume>
+        <Resume text1="Administration und Webentwicklung" text2="TA WingTsun (Kampfkunst)" content="As a trainer for children and adults in TA WingTsun I also took over the web development and the internet presence." start={"2018"} end={"2020"}></Resume>
+        <Resume text1="Qualitysmanagement" text2="Finanzinformatik" content="As a student I worked in Finanzinformatik for quality assurance at IF6. My tasks were to perform test executions and log analysis for the internet branch." start={"2017"} end={"2018"}></Resume >
+        <Resume text1="Manager of a Bistro" text2="Blauer See Garbsen" content="From a very young age, i was running one of the family restaurants. As an organiser and manager of the business i tried to solve every daily problem." start={"2014"} end={"2015"}></Resume>
 
       </div>
 

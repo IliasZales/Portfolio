@@ -60,7 +60,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
 
         <BurgerMenue />
 
-        <div className="  inset-y-2/3  ml-4  flex text-center justify-center rounded-full	 fixed   sticky-button border-black bg-white w-12 sm:w-48 h-12 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
+        <div className="  inset-y-2/3  ml-4  flex text-center justify-center rounded-full	 fixed   sticky-button border-black bg-white w-12 lg:w-48 h-12 sm:h-12 hover:bg-primary hover:text-white border-black border-2">
           <h2 className="text-center pt-1 text-sm sm:text-2xl font-bold "><a href="mailto:info@it-iz.de"><Mail className="w-8 h-8 pt-1" /></a></h2>
 
         </div>
@@ -89,7 +89,7 @@ const Layout = ({ children, pageName, title, description, type, image }: Props) 
       <div className="  h-screen bg-secondary  w-1/4 lg:w-1/3">
 
 
-        <div className="sm:block hidden mt-36 mr-4 text-lg lg:text-xl  mt-4 flex  pl-4 pr-4 pb-4 relative text-white " >  Ich bin ein Full Stack Entwickler aus Hannover mit folgenden Technologien habe ich schon gearbeitet </div>
+        <div className="sm:block hidden mt-36 mr-4 text-lg lg:text-xl  mt-4 flex  pl-4 pr-4 pb-4 relative text-white " > I am a full stack developer from Hannover, Germany and have worked with the following technologies: </div>
         <div className='row-exp flex flex-col flex-wrap lg:flex-row justify-between  pr-6 pl-4'>
           <div className='mt-32 sm:mt-0 text-white first-row '>
 
