@@ -7,7 +7,7 @@ import SEO from "../components/util/seo/Seo"
 const IndexPage = () => (
   <Layout title="Portfolio" pageName="Home" description="Portfolio Home" type="kp" image="no">
 
-    <SEO title="Ilias Zales Portfolio" metaDescription='Ilias Zales Softwareentwickler ' />
+    <SEO title="Ilias Zales Portfolio" metaDescription='Ilias Zales Software-Developer' />
 
     <PicContainer />
   </Layout>

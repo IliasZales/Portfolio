@@ -33,7 +33,7 @@ const PicConatainer = () => {
           <h3 className=" text-lg lg:text-xl insta  text-left align-middle pl-10"><a href="https://instagram.com/ili_aas?utm_medium=copy_link">Instagram</a></h3>
         </div>
 
-        <div className="block sm:hidden  text-sm mt-4 lg:text-xl  flex  pl-4 pr-4 pb-4  text-white " >  Ich bin ein Full Stack Entwickler aus Hannover mit folgenden Technologien habe ich schon gearbeitet </div>
+        <div className="block sm:hidden  text-sm mt-4 lg:text-xl  flex  pl-4 pr-4 pb-4  text-white " >  I am a fullstack developer from Hannover, Germany and have worked with the following technologies:</div>
       </div>
 
 
