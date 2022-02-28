@@ -66,7 +66,8 @@ const LayoutThree = ({ children, pageName, title, description, type, image }: Pr
                     <Card text1="FSW-Media" text2="www.fsw-media.com" content="In cooperation with the Montary-Agency i developed the FSW-Media site, using exclusively React." projectart={'React'} imageCard={"fsw.webp"}></Card>
 
                     <Card text1="endlichlernen" text2="www.endlichlernen.de" content="During pandemic, schools were closed and students could not join their classes. Trying to solve this problem, i did a project helping schools. A video conference room where students joing their classes from home and having their daily schedule." projectart={'Linux-Server - Webkonferenzraum'} imageCard={"endlichlernen.webp"}></Card>
-                    <Card text1="Testpoint-Hannover" text2="www.test-point-hannover.de" content="At the time of Corona, the opportunity arose to open our own test center. The software was provided by the Agntur Montary-Agency, I took over the management for location and sales." projectart={'Test Center'} imageCard={"testzentrum.webp"}></Card>
+                    <Card text1="Testpoint-Hannover" text2="www.test-point-hannover.de" content="At the corona time i had the opportunity to run my own test center. The software was provided by the Montary-Agency.
+I was responsable of sales, marketing and management." projectart={'Test Center'} imageCard={"testzentrum.webp"}></Card>
 
 
                 </div>
@@ -84,7 +85,8 @@ We worked with Typescript, Gatsby and Snipcart." projectart={'Typescript - Gatsb
 
                         <Card text1="endlichlernen" text2="www.endlichlernen.de" content="During pandemic, schools were closed and students could not join their classes.
 Trying to solve this problem, i did a project helping schools. A video conference room where students joing their classes from home and having their daily schedule." projectart={'Linux-Server - Webkonferenzraum'} imageCard={"endlichlernen.webp"}></Card>
-                        <Card text1="Testpoint-Hannover" text2="www.test-point-hannover.de" content="At the time of Corona, the opportunity arose to open our own test center. The software was provided by the Agntur Montary-Agency, I took over the management for location and sales." projectart={'Testzentrum'} imageCard={"testzentrum.webp"}></Card>
+                        <Card text1="Testpoint-Hannover" text2="www.test-point-hannover.de" content="At the corona time i had the opportunity to run my own test center. The software was provided by the Montary-Agency.
+I was responsable of sales, marketing and management." projectart={'Testzentrum'} imageCard={"testzentrum.webp"}></Card>
                     </HorizontalScroll>
 
                 </div>
